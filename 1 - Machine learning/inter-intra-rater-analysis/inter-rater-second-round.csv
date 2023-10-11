@@ -1,0 +1,225 @@
+object_number,original_label,KE,NK,AB,EG,TN
+28,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+36,B_cell,single B-LCL,Single B-LCL,Single B-LCL,Single B-LCL,Single B-LCL
+45,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+87,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell with signaling
+103,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+108,B_cell,single B-LCL,Single B-LCL,Single B-LCL,Single B-LCL,Single B-LCL
+110,T_cell_with_signaling,T cell with signaling,B-LCL & T cell in one layer,T cell w/ signaling,T cell w/ signaling,T cell with signaling
+113,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+124,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+132,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+147,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/ signaling,T cell w/o signalling,T cell w/o signaling
+151,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+165,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+175,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+227,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+237,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+241,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+274,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+510,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/o signalling,T cell with signaling
+566,Synapses_with_signaling,Synapse with signaling,Multi-synapse,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+599,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+667,B_T_cell_in_one_layer,B-LCL & T cell in one layer,Multi-synapse,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+736,Synapses_with_signaling,Synapse with signaling,Multi-synapse,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+906,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+1078,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+1284,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+1475,B_T_cell_in_one_layer,B-LCL & T cell in one layer,Multi-synapse,B-LCL & T cell in one layer,single B-LCL,Multiplets
+1563,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+1735,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+1826,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+2157,No_cell_cell_interaction,No cell-cell interaction,Synapse w/ signaling,Synapse w/ signaling,no cell-cell interaction,No cell-cell interaction
+2180,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+2210,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+2336,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+2400,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+2651,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+2744,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+2862,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+3178,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+3365,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+3683,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+3707,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+4004,Synapses_with_signaling,Synapse with signaling,Multi-synapse,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+4103,T_cell_with_B_cell_fragments,T cell with small B-LCL,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with small B-LCL
+4232,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+4617,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+5093,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+5138,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+5955,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+6053,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/ signaling,no cell-cell interaction,No cell-cell interaction
+6573,Multiplets,Multiplets,Multi-synapse,Multi-synapse,Synapse w/signalling,Multiplets
+6958,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+6999,T_cell_with_B_cell_fragments,T cell with small B-LCL,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with small B-LCL
+7008,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+7516,Multiplets,Multiplets,Multi-synapse,Multi-synapse,Synapse w/signalling,Multiplets
+9162,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+9198,Multiplets,Multiplets,Multi-synapse,Multi-synapse,Synapse w/signalling,Multiplets
+9462,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+10674,Synapses_without_signaling,Synapse w/o signaling,Multi-synapse,Synapse w/o signaling,synape w/o signalling,Synapse w/o signaling
+12382,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,Multiplets
+12828,T_cell_with_B_cell_fragments,B-LCL & T cell in one layer,Synapse w/ signaling,B-LCL & T cell in one layer,no cell-cell interaction,B-LCL & T cell in one layer
+12962,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/signalling,No cell-cell interaction
+13651,T_cell_with_B_cell_fragments,B-LCL & T cell in one layer,Synapse w/ signaling,T cell w/ small B-LCL,no cell-cell interaction,Multiplets
+15766,T_cell_with_B_cell_fragments,T cell with small B-LCL,Multi-synapse,T cell w/ small B-LCL,Synapse w/signalling,Multiplets
+16063,Multiplets,Multiplets,Multi-synapse,Multi-synapse,Synapse w/signalling,Multiplets
+16278,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/ signaling,no cell-cell interaction,No cell-cell interaction
+16494,Multiplets,Multiplets,Multi-synapse,Multi-synapse,Synapse w/signalling,Multiplets
+16681,No_cell_cell_interaction,No cell-cell interaction,Synapse w/ signaling,Synapse w/ signaling,synapse w/o signalling,Synapse with signaling
+16716,B_T_cell_in_one_layer,Multiplets,Synapse w/ signaling,Synapse w/ signaling,single B-LCL,Multiplets
+18440,Synapses_without_signaling,Synapse w/o signaling,Synapse w/ signaling,Synapse w/o signaling,single B-LCL,Synapse w/o signaling
+18970,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+19257,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+20001,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,single B-LCL,Synapse with signaling
+20016,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Multi-synapse,no cell-cell interaction,No cell-cell interaction
+20329,Synapses_with_signaling,Synapse with signaling,Single B-LCL,Synapse w/ signaling,Synapse w/signalling,Multiplets
+20338,Synapses_with_signaling,Synapse with signaling,Multi-synapse,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+20423,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/o signaling,synapse w/o signalling,No cell-cell interaction
+20497,B_T_cell_in_one_layer,Synapse with signaling,Single B-LCL,Synapse w/ signaling,single B-LCL,B-LCL & T cell in one layer
+20570,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/o signaling,no cell-cell interaction,No cell-cell interaction
+21190,Synapses_with_signaling,Synapse with signaling,No cell-cell interaction,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+21320,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+21428,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+21919,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+23331,Multiplets,Multiplets,Multi-synapse,Multi-synapse,Synapse w/signalling,Multiplets
+25015,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/o signaling,synapse w/o signalling,No cell-cell interaction
+26238,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,Synapse w/ signaling,no cell-cell interaction,Synapse with signaling
+27342,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+27383,B_T_cell_in_one_layer,B-LCL & T cell in one layer,B-LCL & T cell in one layer,B-LCL & T cell in one layer,single B-LCL,B-LCL & T cell in one layer
+27692,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+29620,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+30889,Multiplets,Multiplets,Multi-synapse,Multi-synapse,Synapse w/signalling,Multiplets
+33992,Synapses_without_signaling,Synapse w/o signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/o signalling,Synapse with signaling
+34828,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/ signaling,no cell-cell interaction,No cell-cell interaction
+39200,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+39376,B_T_cell_in_one_layer,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+39578,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synapse w/o signalling,Synapse with signaling
+41061,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+45619,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+48066,B_T_cell_in_one_layer,B-LCL & T cell in one layer,B-LCL & T cell in one layer,T cell w/o signaling,T cell w/o signalling,B-LCL & T cell in one layer
+51067,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/o signaling,T cell w/ small B-LCL,no cell-cell interaction,T cell with small B-LCL
+220026,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220029,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+220083,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+220085,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell with signaling
+220089,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220090,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220108,B_T_cell_in_one_layer,B-LCL & T cell in one layer,Multi-synapse,B-LCL & T cell in one layer,synapse w/o signalling,B-LCL & T cell in one layer
+220121,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220132,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+220134,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220157,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,single B-LCL,T cell w/o signaling
+220178,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+220208,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+220209,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220211,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/o signalling,T cell with signaling
+220214,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+220221,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell with signaling
+220238,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220307,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220328,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220353,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220355,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+220485,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+220486,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+220504,Multiplets,Multiplets,Multi-synapse,Multi-synapse,Synapse w/ signalling,Multiplets
+220514,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell with signaling
+220753,T_cell_with_B_cell_fragments,T cell with small B-LCL,No cell-cell interaction,T cell w/ small B-LCL,T cell w/o signalling,T cell with small B-LCL
+220978,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220979,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+220980,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+220985,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+220992,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+221021,B_cell,single B-LCL,Single B-LCL,Single B-LCL,single B-LCL,Single B-LCL
+221033,T_cell_with_B_cell_fragments,T cell with small B-LCL,B-LCL & T cell in one layer,T cell w/ signaling,T cell w/ signalling,T cell with small B-LCL
+221089,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+221372,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+221392,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+221532,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+221644,T_cell_with_B_cell_fragments,T cell with small B-LCL,No cell-cell interaction,T cell w/ small B-LCL,synapse w/o signalling,T cell with small B-LCL
+221833,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+221871,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+222409,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,T cell w/ small B-LCL,Synapse w/ signalling,T cell with small B-LCL
+222492,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/o signaling,no cell-cell interaction,B-LCL & T cell in one layer
+222760,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synpase w/ signalling,Synapse with signaling
+222965,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/signalling,Synapse with signaling
+223512,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+223590,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/signalling,Synapse with signaling
+223713,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/ signalling,Synapse with signaling
+223805,Synapses_without_signaling,Synapse w/o signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/o signalling,Synapse with signaling
+224015,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/ signalling,Synapse with signaling
+224314,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+224370,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/ signaling,no cell-cell interaction,No cell-cell interaction
+224868,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+225013,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/o signaling,T cell w/ small B-LCL,single B-LCL,T cell with small B-LCL
+225042,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/o signaling,T cell w/ small B-LCL,synapse w/o signalling,T cell with small B-LCL
+225059,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/ signaling,no cell-cell interaction,No cell-cell interaction
+225688,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+225859,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/o signaling,T cell w/ small B-LCL,T cell w/o signalling,T cell with small B-LCL
+225884,B_T_cell_in_one_layer,B-LCL & T cell in one layer,B-LCL & T cell in one layer,B-LCL & T cell in one layer,T cell w/ signalling,B-LCL & T cell in one layer
+226162,T_cell_with_B_cell_fragments,T cell with small B-LCL,T cell w/ small B-LCL,T cell w/ small B-LCL,T cell w/o signalling,T cell with small B-LCL
+226246,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/ signalling,Synapse with signaling
+227696,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,Synapse w/ signaling,synapse w/signalling,T cell with small B-LCL
+228038,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/o signaling,no cell-cell interaction,No cell-cell interaction
+228725,T_cell_with_B_cell_fragments,T cell with small B-LCL,T cell w/ small B-LCL,T cell w/ small B-LCL,synapse w/o signalling,T cell with small B-LCL
+228921,T_cell_with_B_cell_fragments,T cell with small B-LCL,T cell w/ small B-LCL,T cell w/ small B-LCL,no cell-cell interaction,T cell with small B-LCL
+229217,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+230085,Synapses_with_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synapse w/o signalling,Synapse with signaling
+230938,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+231663,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synapse w/o signalling,Synapse with signaling
+231800,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+231802,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+231825,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+231837,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/ signaling,T cell w/o signalling,T cell with signaling
+231906,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+232278,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,T cell w/o signalling,Synapse w/o signaling
+232599,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synapse w/o signalling,No cell-cell interaction
+232640,Multiplets,Multiplets,Synapse w/ signaling,Synapse w/o signaling,synapse w/o signalling,Multiplets
+233333,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+233485,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,no cell-cell interaction,Synapse with signaling
+233655,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,Synapse w/ signaling,synapse w/o signalling,Multiplets
+233783,No_cell_cell_interaction,No cell-cell interaction,Synapse w/o signaling,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+235556,Synapses_with_signaling,Synapse w/o signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/o signalling,Synapse with signaling
+235990,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/ signalling,Synapse with signaling
+236054,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/o signaling,no cell-cell interaction,No cell-cell interaction
+236891,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/ signalling,Synapse with signaling
+238456,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+238874,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synapse w/o signalling,No cell-cell interaction
+238877,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+239285,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+239376,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/ signaling,no cell-cell interaction,No cell-cell interaction
+239413,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/ signaling,synpase w/ signalling,No cell-cell interaction
+239434,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,Synapse w/ signaling,no cell-cell interaction,No cell-cell interaction
+241251,B_T_cell_in_one_layer,T cell with small B-LCL,B-LCL & T cell in one layer,T cell w/ small B-LCL,T cell w/ signalling,B-LCL & T cell in one layer
+242413,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,T cell w/ signalling,Synapse w/o signaling
+243231,B_T_cell_in_one_layer,B-LCL & T cell in one layer,T cell w/o signaling,T cell w/ small B-LCL,T cell w/ signalling,B-LCL & T cell in one layer
+243467,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/o signalling,Synapse with signaling
+246002,B_T_cell_in_one_layer,B-LCL & T cell in one layer,B-LCL & T cell in one layer,T cell w/ small B-LCL,no cell-cell interaction,B-LCL & T cell in one layer
+246092,B_T_cell_in_one_layer,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,single B-LCL,B-LCL & T cell in one layer
+246489,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/o signalling,Synapse with signaling
+247131,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/o signalling,Synapse with signaling
+247539,T_cell,T cell w/o signaling,T cell w/o signaling,T cell w/o signaling,T cell w/o signalling,T cell w/o signaling
+247567,No_cell_cell_interaction,No cell-cell interaction,No cell-cell interaction,No cell-cell interaction,no cell-cell interaction,No cell-cell interaction
+247977,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/o signalling,T cell with signaling
+248958,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synpase w/ signalling,Synapse with signaling
+249663,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,Synapse w/ signaling,synpase w/ signalling,B-LCL & T cell in one layer
+251257,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/signalling,Synapse with signaling
+252043,Synapses_with_signaling,Synapse with signaling,Multi-synapse,Synapse w/ signaling,synapse w/signalling,Synapse with signaling
+252264,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synpase w/ signalling,Synapse with signaling
+252577,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/signalling,Synapse with signaling
+253605,T_cell_with_B_cell_fragments,T cell with small B-LCL,Synapse w/ signaling,Synapse w/ signaling,synapse w/signalling,Synapse with signaling
+254586,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synpase w/o signalling,Synapse with signaling
+255069,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/signalling,Synapse with signaling
+256603,Synapses_with_signaling,Multiplets,Synapse w/ signaling,Synapse w/ signaling,synapse w/signalling,Synapse with signaling
+256668,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,synapse w/signalling,Synapse with signaling
+258473,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+258692,Multiplets,Multiplets,Multi-synapse,Multi-synapse,multi-synapse,Multiplets
+261021,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synpase w/o signalling,Synapse w/o signaling
+263957,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+264083,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synapse w/o signalling,Synapse w/o signaling
+264101,T_cell_with_B_cell_fragments,T cell with small B-LCL,B-LCL & T cell in one layer,T cell w/ small B-LCL,T cell w/ signalling,T cell with small B-LCL
+264425,T_cell_with_signaling,T cell with signaling,T cell w/ signaling,T cell w/ signaling,T cell w/ signalling,T cell with signaling
+267851,Synapses_without_signaling,Synapse w/o signaling,Synapse w/o signaling,Synapse w/o signaling,synapse w/o signalling,Synapse w/o signaling
+274036,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/ signalling,Synapse with signaling
+274502,Synapses_with_signaling,Synapse with signaling,Synapse w/ signaling,Synapse w/ signaling,Synapse w/ signalling,Synapse with signaling

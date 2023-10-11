@@ -1,0 +1,18 @@
+,feature_type,E3 D6,E1 D1,E3 D1,E1 D2,E2 D3,E3 D5,E2 D4
+homogeneity_F-Actin,texture,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+ASM_F-Actin,texture,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+energy_F-Actin,texture,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+max_intensity_ratio_F-Actin_R5_R7,synaptic feature,-0.0,-1.0,-1.0,1.0,-0.0,-1.0,-1.0
+mean_intensity_F-Actin,intensity statistics,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+std_intensity_F-Actin,intensity statistics,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+min_intensity_F-Actin,intensity statistics,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+max_intensity_F-Actin,intensity statistics,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+sum_intensity_F-Actin,intensity statistics,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+min_intensity_P-CD3zeta,intensity statistics,1.0,1.0,1.0,-1.0,1.0,1.0,-0.0
+shannon_entropy_F-Actin,intensity statistics,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+manders_overlap_coefficient_R4_F-Actin_R7_P-CD3zeta,colocalization,1.0,1.0,1.0,-1.0,1.0,1.0,-1.0
+manders_overlap_coefficient_R7_P-CD3zeta_R4_F-Actin,colocalization,1.0,1.0,1.0,-1.0,1.0,1.0,-1.0
+euclidean_distance_R4_F-Actin_R7_P-CD3zeta,colocalization,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+euclidean_distance_R7_P-CD3zeta_R4_F-Actin,colocalization,-1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0
+manders_overlap_coefficient_R4_F-Actin_R5_MHCII,colocalization,1.0,1.0,1.0,-1.0,-1.0,1.0,-1.0
+manders_overlap_coefficient_R5_MHCII_R4_F-Actin,colocalization,1.0,1.0,1.0,-1.0,-1.0,1.0,-1.0

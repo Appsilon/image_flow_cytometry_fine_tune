@@ -1,0 +1,43 @@
+,feature_type,E3 D5,E4 D2,E4 D8,E4 D7,E4 D9,E3 D1
+homogeneity_CD3,texture,-0.0,-1.0,-1.0,-1.0,-1.0,-0.0
+homogeneity_P-CD3zeta,texture,1.0,1.0,1.0,-0.0,1.0,1.0
+dissimilarity_P-CD3zeta,texture,-1.0,-1.0,-1.0,-0.0,-1.0,-1.0
+mean_intensity_ratio_CD3_R5_R7,synaptic feature,0.0,1.0,1.0,1.0,1.0,-0.0
+sum_intensity_ratio_CD3_R5_R7,synaptic feature,0.0,1.0,1.0,1.0,1.0,-0.0
+mean_intensity_ratio_P-CD3zeta_R5_R7,synaptic feature,0.0,1.0,1.0,1.0,1.0,0.0
+sum_intensity_ratio_P-CD3zeta_R5_R7,synaptic feature,0.0,1.0,1.0,1.0,1.0,0.0
+sum_intensity_ratio_MHCII_R5_R7,synaptic feature,1.0,1.0,1.0,1.0,1.0,0.0
+mean_intensity_ratio_MHCII_R5_R7,synaptic feature,1.0,1.0,1.0,1.0,1.0,0.0
+max_intensity_ratio_MHCII_R5_R7,synaptic feature,1.0,1.0,1.0,-0.0,1.0,1.0
+mask_based_solidity_MHCII,morphology,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0
+mask_based_extent_MHCII,morphology,-1.0,-0.0,-1.0,-1.0,-1.0,-0.0
+mask_based_eccentricity_CD3,morphology,1.0,1.0,0.0,1.0,1.0,0.0
+mask_based_solidity_CD3,morphology,-1.0,-1.0,-0.0,-1.0,-1.0,-0.0
+mask_based_eccentricity_P-CD3zeta,morphology,1.0,1.0,0.0,1.0,1.0,0.0
+mask_based_solidity_P-CD3zeta,morphology,-1.0,-1.0,-0.0,-1.0,-1.0,-0.0
+std_intensity_CD3,intensity statistics,-0.0,-0.0,-1.0,-1.0,-1.0,-1.0
+kurtosis_intensity_P-CD3zeta,intensity statistics,1.0,1.0,0.0,0.0,1.0,1.0
+sum_intensity_P-CD3zeta,intensity statistics,1.0,1.0,0.0,1.0,0.0,1.0
+mean_intensity_P-CD3zeta,intensity statistics,1.0,1.0,1.0,1.0,1.0,1.0
+skew_intensity_P-CD3zeta,intensity statistics,1.0,1.0,1.0,0.0,1.0,1.0
+shannon_entropy_P-CD3zeta,intensity statistics,1.0,1.0,1.0,1.0,1.0,-1.0
+std_intensity_P-CD3zeta,intensity statistics,1.0,1.0,1.0,1.0,1.0,-1.0
+max_intensity_P-CD3zeta,intensity statistics,1.0,1.0,1.0,1.0,1.0,1.0
+euclidean_distance_R6_CD3_R7_P-CD3zeta,colocalization,-0.0,0.0,-1.0,-1.0,-1.0,-1.0
+intensity_correlation_quotient_R5_MHCII_R7_P-CD3zeta,colocalization,0.0,1.0,1.0,1.0,1.0,0.0
+intensity_correlation_quotient_R7_P-CD3zeta_R5_MHCII,colocalization,0.0,1.0,1.0,1.0,1.0,0.0
+intensity_correlation_quotient_R5_MHCII_R6_CD3,colocalization,0.0,1.0,1.0,1.0,1.0,0.0
+euclidean_distance_R7_P-CD3zeta_R6_CD3,colocalization,-0.0,0.0,-1.0,-1.0,-1.0,-1.0
+correlation_distance_R5_MHCII_R6_CD3,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-0.0
+correlation_distance_R6_CD3_R5_MHCII,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-0.0
+jaccard_distance_MHCII_CD3,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-0.0
+dice_distance_MHCII_CD3,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-0.0
+correlation_distance_R7_P-CD3zeta_R5_MHCII,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-0.0
+correlation_distance_R5_MHCII_R7_P-CD3zeta,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-0.0
+jaccard_distance_MHCII_P-CD3zeta,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-0.0
+dice_distance_MHCII_P-CD3zeta,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-0.0
+correlation_distance_R7_P-CD3zeta_R6_CD3,colocalization,-1.0,-1.0,-1.0,-1.0,-0.0,-1.0
+correlation_distance_R6_CD3_R7_P-CD3zeta,colocalization,-1.0,-1.0,-1.0,-1.0,-0.0,-1.0
+correlation_distance_R5_MHCII_R4_F-Actin,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0
+correlation_distance_R4_F-Actin_R5_MHCII,colocalization,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0
+intensity_correlation_quotient_R6_CD3_R5_MHCII,colocalization,0.0,1.0,1.0,1.0,1.0,0.0

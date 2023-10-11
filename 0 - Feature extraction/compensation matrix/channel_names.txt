@@ -1,0 +1,12 @@
+Ch01:BF
+Ch02:Ab
+Ch03:CD45
+Ch04:F-Actin
+Ch05:
+Ch06:MHCII
+Ch07:CD3
+Ch08:
+Ch09:
+Ch10:
+Ch11:P-CD3zeta
+Ch12:Live/Dead
