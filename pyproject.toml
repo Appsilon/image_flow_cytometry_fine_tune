@@ -9,6 +9,7 @@ dependencies = [
     "ipykernel>=6.29.5",
     "jupyter>=1.1.1",
     "numpy==1.26.4",
+    "pandas<2.0",
     "scifai @ git+https://github.com/marrlab/scifAI.git",
     "scikit-image<0.19",
     "scikit-learn==1.5.1",
