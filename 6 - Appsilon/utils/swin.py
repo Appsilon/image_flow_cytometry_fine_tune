@@ -45,5 +45,5 @@ class SwinModel(LightningModule):
 
     def configure_optimizers(self):
         optimizer = optim.Adam(self.parameters(), lr=self.learning_rate)
-        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.1, patience=100)
+        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.1, patience=10, mode="max")
         return {"optimizer": optimizer, "lr_scheduler": scheduler, "monitor": "val_f1"}
