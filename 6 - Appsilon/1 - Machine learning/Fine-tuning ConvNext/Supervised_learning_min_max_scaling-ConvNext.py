@@ -112,7 +112,7 @@ train_dataset = DatasetGenerator(metadata=metadata.loc[train_index,:],
                                  transform=transforms.Compose(train_transform))
 
 # %%
-train_loader = DataLoader(train_dataset, batch_size=128, shuffle=False, num_workers = 4)
+train_loader = DataLoader(train_dataset, batch_size=32, shuffle=False, num_workers = 4)
 
 
 # %%
@@ -182,7 +182,7 @@ test_transform =  transforms.Compose([
 
 # %%
 lr=0.001
-batch_size=256
+batch_size=32
 max_epochs=500
 
 # %%
