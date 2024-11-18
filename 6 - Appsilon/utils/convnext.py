@@ -3,9 +3,10 @@ import torch.optim as optim
 from lightning import LightningModule
 from timm import create_model
 from torchmetrics import Accuracy, F1Score
+from torch.optim.lr_scheduler import OneCycleLR
 
 class ConvnextModel(LightningModule):
-    def __init__(self, num_classes, in_chans, learning_rate=0.01):
+    def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate=0.01, max_epochs=10):
         super().__init__()
         self.model = create_model(
             'convnext_base.fb_in22k_ft_in1k',
@@ -14,6 +15,8 @@ class ConvnextModel(LightningModule):
             in_chans=in_chans
         )
         self.learning_rate = learning_rate
+        self.max_epochs = max_epochs
+        self.steps_per_epoch = steps_per_epoch
 
         self.train_acc = Accuracy(num_classes=num_classes, task="multiclass")
         self.val_acc = Accuracy(num_classes=num_classes, task="multiclass")
@@ -39,16 +42,14 @@ class ConvnextModel(LightningModule):
         self.log("val_f1", self.f1_score(outputs, labels), prog_bar=True)
         return loss
 
-    def test_step(self, batch, batch_idx):
-        inputs, labels = batch
-        outputs = self(inputs)
-        loss = nn.CrossEntropyLoss()(outputs, labels)
-        self.log("test_loss", loss)
-        self.log("test_acc", self.val_acc(outputs, labels))
-        self.log("test_f1", self.f1_score(outputs, labels))
-        return loss
-
     def configure_optimizers(self):
         optimizer = optim.Adam(self.parameters(), lr=self.learning_rate)
-        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.1, patience=10, mode="max")
+        
+        scheduler = OneCycleLR(
+            optimizer,
+            max_lr=self.learning_rate,
+            epochs=self.max_epochs,
+            steps_per_epoch=self.steps_per_epoch
+        )
+        
         return {"optimizer": optimizer, "lr_scheduler": scheduler, "monitor": "val_f1"}
