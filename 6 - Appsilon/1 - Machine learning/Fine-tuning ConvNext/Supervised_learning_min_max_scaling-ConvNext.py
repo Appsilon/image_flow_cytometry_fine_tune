@@ -209,7 +209,7 @@ valid_dl = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False, num_w
 dls = DataLoaders(train_dl, valid_dl)
 print(tools.print_cuda_memory())
 # %%
-model = convnext.ConvnextModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_loader))
+model = convnext.ConvnextModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_loader), learning_rate=lr, max_epochs=max_epochs)
 
 # %%
 module = data_module.SynapseFormationDataModule(metadata, train_index, validation_index, test_index, label_map, selected_channels, statistics, train_transform,

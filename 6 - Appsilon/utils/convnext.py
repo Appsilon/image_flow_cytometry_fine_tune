@@ -6,7 +6,7 @@ from torchmetrics import Accuracy, F1Score
 from torch.optim.lr_scheduler import OneCycleLR
 
 class ConvnextModel(LightningModule):
-    def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate=0.01, max_epochs=10):
+    def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate, max_epochs):
         super().__init__()
         self.model = create_model(
             'convnext_base.fb_in22k_ft_in1k',
@@ -44,7 +44,10 @@ class ConvnextModel(LightningModule):
 
     def configure_optimizers(self):
         optimizer = optim.Adam(self.parameters(), lr=self.learning_rate)
-        
+        self.logger.experiment["optimizer/lr"].log(self.learning_rate)
+        optimizer_name = optimizer.__class__.__name__
+        self.logger.experiment["optimizer/name"].log(optimizer_name)
+
         scheduler = OneCycleLR(
             optimizer,
             max_lr=self.learning_rate,
