@@ -181,9 +181,9 @@ test_transform =  transforms.Compose([
 
 
 # %%
-lr=0.001
+lr=0.0004
 batch_size=32
-max_epochs=500
+max_epochs=10
 
 # %%
 from fastai.vision.all import *
