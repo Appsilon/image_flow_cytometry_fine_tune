@@ -11,6 +11,7 @@ class VitModel(LightningModule):
     def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate, max_epochs, 
                  lora_r_alpha, lora_target_modules, lora_dropout, lora_bias):
         super().__init__()
+        self.save_hyperparameters()
         non_lora_model = AutoModelForImageClassification.from_pretrained(
                         "google/vit-base-patch16-224-in21k",
                         ignore_mismatched_sizes=True,

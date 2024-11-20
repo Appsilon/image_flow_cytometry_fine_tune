@@ -8,6 +8,7 @@ from torch.optim.lr_scheduler import OneCycleLR
 class ConvnextModel(LightningModule):
     def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate, max_epochs):
         super().__init__()
+        self.save_hyperparameters()
         self.model = create_model(
             'convnext_base.fb_in22k_ft_in1k',
             pretrained=True,

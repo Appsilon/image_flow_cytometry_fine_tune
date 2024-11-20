@@ -11,6 +11,7 @@ class ResnetModel(LightningModule):
     def __init__(self, num_classes, in_chans, learning_rate=0.01):
         super().__init__()
         model = resnet18(pretrained=True)
+        self.save_hyperparameters()
         if in_chans != 3:
             model.conv1 = nn.Conv2d(in_chans, 64, kernel_size=(7, 7),
                                     stride=(2, 2), padding=(3, 3), bias=False)
