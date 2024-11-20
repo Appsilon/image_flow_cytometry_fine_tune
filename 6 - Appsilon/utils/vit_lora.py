@@ -26,7 +26,8 @@ class VitModel(LightningModule):
             lora_alpha=lora_r_alpha,
             target_modules=lora_target_modules,
             lora_dropout=lora_dropout,
-            bias=lora_bias
+            bias=lora_bias,
+            use_rslora=True,
         )
 
         self.model = get_peft_model(non_lora_model, lora_config)
