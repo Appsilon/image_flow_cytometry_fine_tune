@@ -18,6 +18,7 @@ class VitModel(LightningModule):
                         num_labels = num_classes,
                         num_channels=in_chans,
 )
+        self.logger.experiment["model/name"].log(non_lora_model.__class__.__name__)
 
         print("> Initializing models...")
         print(non_lora_model)

@@ -15,6 +15,8 @@ class ConvnextModel(LightningModule):
             num_classes=num_classes,
             in_chans=in_chans
         )
+        self.logger.experiment["model/name"].log(self.model.__class__.__name__)
+
         self.learning_rate = learning_rate
         self.max_epochs = max_epochs
         self.steps_per_epoch = steps_per_epoch

@@ -18,6 +18,7 @@ class ResnetModel(LightningModule):
         num_ftrs = model.fc.in_features
         model.fc = nn.Linear(num_ftrs, num_classes)
         self.model = model
+        self.logger.experiment["model/name"].log(self.model.__class__.__name__)
 
         self.learning_rate = learning_rate
         self.train_acc = Accuracy(num_classes=num_classes, task="multiclass")

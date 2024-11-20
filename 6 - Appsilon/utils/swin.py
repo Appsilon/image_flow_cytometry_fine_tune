@@ -9,6 +9,7 @@ class SwinModel(LightningModule):
         super().__init__()
         self.model = create_model("swinv2_tiny_window16_256.ms_in1k", pretrained=True, num_classes=num_classes, in_chans=in_chans)
         self.save_hyperparameters()
+        self.logger.experiment["model/name"].log(self.model.__class__.__name__)
         self.learning_rate = learning_rate
 
         self.train_acc = Accuracy(num_classes=num_classes, task="multiclass")
