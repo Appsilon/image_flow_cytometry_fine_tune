@@ -73,5 +73,11 @@ class VitModel(LightningModule):
             epochs=self.max_epochs,
             steps_per_epoch=self.steps_per_epoch
         )
+
+        lr_scheduler_config = {
+        'scheduler': scheduler,
+        'interval': 'step',  # Step after every batch
+        'monitor': 'val_f1'
+    }
         
-        return {"optimizer": optimizer, "lr_scheduler": scheduler, "monitor": "val_f1"}
+        return {"optimizer": optimizer, "lr_scheduler": lr_scheduler_config}
