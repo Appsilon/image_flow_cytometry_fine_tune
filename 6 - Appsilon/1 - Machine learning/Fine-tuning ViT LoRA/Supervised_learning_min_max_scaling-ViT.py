@@ -183,15 +183,14 @@ test_transform =  transforms.Compose([
 # %%
 lr=0.0004
 batch_size=32
-max_epochs=10
-lora_r_alpha = 64
-lora_target_modules = target_modules = [
+max_epochs=5
+lora_r_alpha = 8
+lora_target_modules = [
     "attention.query",  # Query layer in attention
     "attention.key",    # Key layer in attention
     "attention.value",  # Value layer in attention
     "attention.output.dense",  # Dense layer in attention output
     "intermediate.dense",  # Intermediate MLP layer
-    "output.dense"  # Output MLP layer
 ]
 lora_bias = "none"
 lora_dropout = 0.1
@@ -218,16 +217,14 @@ valid_dataset = DatasetGenerator(metadata=metadata.loc[validation_index, :],
 train_dl = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers = 4)
 valid_dl = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False, num_workers = 4)
 dls = DataLoaders(train_dl, valid_dl)
-print(tools.print_cuda_memory())
 # %%
-model = vit_lora.VitModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_loader), learning_rate=lr, max_epochs=max_epochs,
+model = vit_lora.VitModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_dl), learning_rate=lr, max_epochs=max_epochs,
                           lora_r_alpha=lora_r_alpha, lora_target_modules=lora_target_modules, lora_dropout=lora_dropout, lora_bias=lora_bias)
 # %%
 module = data_module.SynapseFormationDataModule(metadata, train_index, validation_index, test_index, label_map, selected_channels, statistics, train_transform,
                                                 validation_transform, test_transform, batch_size, reshape_size)
 
 # %%
-print(tools.print_cuda_memory())
 
 run = neptune.init_run(
     project="appsilon/image-flow-cytometry-finetune",
@@ -242,11 +239,10 @@ trainer = pl.Trainer(
     accelerator="gpu" if torch.cuda.is_available() else "cpu",
     logger=pl.loggers.NeptuneLogger(run=run, log_model_checkpoints=False),
     callbacks=[lr_monitor])
-print(tools.print_cuda_memory())
 
 trainer.fit(model, datamodule=module)
 
-trainer.test(model, datamodule=module)
+# trainer.test(model, datamodule=module)
 
 run.stop()
 
