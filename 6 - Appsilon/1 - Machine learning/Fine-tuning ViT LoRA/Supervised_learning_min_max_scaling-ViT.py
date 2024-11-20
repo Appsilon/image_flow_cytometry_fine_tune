@@ -183,14 +183,11 @@ test_transform =  transforms.Compose([
 # %%
 lr=0.0004
 batch_size=32
-max_epochs=5
+max_epochs=10
 lora_r_alpha = 8
 lora_target_modules = [
     "attention.query",  # Query layer in attention
-    "attention.key",    # Key layer in attention
     "attention.value",  # Value layer in attention
-    "attention.output.dense",  # Dense layer in attention output
-    "intermediate.dense",  # Intermediate MLP layer
 ]
 lora_bias = "none"
 lora_dropout = 0.1
