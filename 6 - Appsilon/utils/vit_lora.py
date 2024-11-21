@@ -18,10 +18,9 @@ class VitModel(LightningModule):
                         num_labels = num_classes,
                         num_channels=in_chans,
 )
-        self.logger.experiment["model/name"].log(non_lora_model.__class__.__name__)
+        # self.model_name = non_lora_model.__class__.__name__
 
         print("> Initializing models...")
-        print(non_lora_model)
         
         lora_config = LoraConfig(
             r=lora_r_alpha,
@@ -30,12 +29,15 @@ class VitModel(LightningModule):
             lora_dropout=lora_dropout,
             bias=lora_bias,
             use_rslora=True,
+            # modules_to_save="classifier"
         )
 
         self.model = get_peft_model(non_lora_model, lora_config)
         self.learning_rate = learning_rate
         self.max_epochs = max_epochs
         self.steps_per_epoch = steps_per_epoch
+
+        print(self.model.print_trainable_parameters())
 
         self.train_acc = Accuracy(num_classes=num_classes, task="multiclass")
         self.val_acc = Accuracy(num_classes=num_classes, task="multiclass")
@@ -68,6 +70,7 @@ class VitModel(LightningModule):
         self.logger.experiment["optimizer/lr"].log(self.learning_rate)
         optimizer_name = optimizer.__class__.__name__
         self.logger.experiment["optimizer/name"].log(optimizer_name)
+        # self.logger.experiment["model/name"].log(self.model_name)
 
         scheduler = OneCycleLR(
             optimizer,
