@@ -5,13 +5,24 @@ from torchmetrics import Accuracy, F1Score
 from torch.optim.lr_scheduler import OneCycleLR
 from peft import LoraConfig, get_peft_model
 from transformers import AutoModelForImageClassification, AutoImageProcessor
+from peft.utils.other import ModulesToSaveWrapper
 
+def modules_to_save_getattr_hook(self, name: str):
+    try:
+        return super(ModulesToSaveWrapper, self).__getattr__(name)
+    except AttributeError:
+        if self.active_adapter not in self.modules_to_save:
+            return getattr(self.original_module, name)
+        return getattr(self.modules_to_save[self.active_adapter], name)
+
+setattr(ModulesToSaveWrapper, '__getattr__', modules_to_save_getattr_hook)
 
 class VitModel(LightningModule):
     def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate, max_epochs, 
                  lora_r_alpha, lora_target_modules, lora_dropout, lora_bias, lora_modules_to_save):
         super().__init__()
         self.save_hyperparameters()
+        print(lora_modules_to_save)
         non_lora_model = AutoModelForImageClassification.from_pretrained(
                         "google/vit-base-patch16-224-in21k",
                         ignore_mismatched_sizes=True,
