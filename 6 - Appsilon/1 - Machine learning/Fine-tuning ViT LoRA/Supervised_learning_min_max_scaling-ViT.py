@@ -183,13 +183,13 @@ test_transform =  transforms.Compose([
 # %%
 lr=0.004
 batch_size=32
-max_epochs=150
+max_epochs=50
 lora_r_alpha = 8
 lora_target_modules = [
     "query",  # Query layer in attention
     "value",  # Value layer in attention
 ]
-lora_modules_to_save = ["classifier"]
+lora_modules_to_save = ["classifier", "vit.embeddings"]
 lora_bias = "none"
 lora_dropout = 0.1
 
