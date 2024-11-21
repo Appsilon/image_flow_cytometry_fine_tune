@@ -181,14 +181,15 @@ test_transform =  transforms.Compose([
 
 
 # %%
-lr=0.0004
+lr=0.004
 batch_size=32
-max_epochs=10
+max_epochs=150
 lora_r_alpha = 8
 lora_target_modules = [
-    "attention.query",  # Query layer in attention
-    "attention.value",  # Value layer in attention
+    "query",  # Query layer in attention
+    "value",  # Value layer in attention
 ]
+lora_modules_to_save = ["classifier"]
 lora_bias = "none"
 lora_dropout = 0.1
 
@@ -216,7 +217,7 @@ valid_dl = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False, num_w
 dls = DataLoaders(train_dl, valid_dl)
 # %%
 model = vit_lora.VitModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_dl), learning_rate=lr, max_epochs=max_epochs,
-                          lora_r_alpha=lora_r_alpha, lora_target_modules=lora_target_modules, lora_dropout=lora_dropout, lora_bias=lora_bias)
+                          lora_r_alpha=lora_r_alpha, lora_target_modules=lora_target_modules, lora_dropout=lora_dropout, lora_bias=lora_bias, lora_modules_to_save=lora_modules_to_save)
 # %%
 module = data_module.SynapseFormationDataModule(metadata, train_index, validation_index, test_index, label_map, selected_channels, statistics, train_transform,
                                                 validation_transform, test_transform, batch_size, reshape_size)

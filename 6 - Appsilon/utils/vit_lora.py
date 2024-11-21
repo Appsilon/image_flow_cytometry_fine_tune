@@ -9,7 +9,7 @@ from transformers import AutoModelForImageClassification, AutoImageProcessor
 
 class VitModel(LightningModule):
     def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate, max_epochs, 
-                 lora_r_alpha, lora_target_modules, lora_dropout, lora_bias):
+                 lora_r_alpha, lora_target_modules, lora_dropout, lora_bias, lora_modules_to_save):
         super().__init__()
         self.save_hyperparameters()
         non_lora_model = AutoModelForImageClassification.from_pretrained(
@@ -21,6 +21,10 @@ class VitModel(LightningModule):
         # self.model_name = non_lora_model.__class__.__name__
 
         print("> Initializing models...")
+        # print(non_lora_model)
+        # print("\n\n Hierarchy:\n")
+        # for name, module in non_lora_model.named_modules():
+        #     print(name)
         
         lora_config = LoraConfig(
             r=lora_r_alpha,
@@ -29,7 +33,7 @@ class VitModel(LightningModule):
             lora_dropout=lora_dropout,
             bias=lora_bias,
             use_rslora=True,
-            # modules_to_save="classifier"
+            modules_to_save=lora_modules_to_save
         )
 
         self.model = get_peft_model(non_lora_model, lora_config)
@@ -38,7 +42,9 @@ class VitModel(LightningModule):
         self.steps_per_epoch = steps_per_epoch
 
         print(self.model.print_trainable_parameters())
-
+        for name, param in self.model.named_parameters():
+            if param.requires_grad:
+                print(f"Trainable parameter: {name}")
         self.train_acc = Accuracy(num_classes=num_classes, task="multiclass")
         self.val_acc = Accuracy(num_classes=num_classes, task="multiclass")
         self.f1_score = F1Score(num_classes=num_classes, task="multiclass", average="macro")
@@ -70,7 +76,6 @@ class VitModel(LightningModule):
         self.logger.experiment["optimizer/lr"].log(self.learning_rate)
         optimizer_name = optimizer.__class__.__name__
         self.logger.experiment["optimizer/name"].log(optimizer_name)
-        # self.logger.experiment["model/name"].log(self.model_name)
 
         scheduler = OneCycleLR(
             optimizer,
