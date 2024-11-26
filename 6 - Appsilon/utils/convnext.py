@@ -15,7 +15,6 @@ class ConvnextModel(LightningModule):
             num_classes=num_classes,
             in_chans=in_chans
         )
-        self.logger.experiment["model/name"].log(self.model.__class__.__name__)
 
         self.learning_rate = learning_rate
         self.max_epochs = max_epochs
@@ -50,6 +49,7 @@ class ConvnextModel(LightningModule):
         self.logger.experiment["optimizer/lr"].log(self.learning_rate)
         optimizer_name = optimizer.__class__.__name__
         self.logger.experiment["optimizer/name"].log(optimizer_name)
+        self.logger.experiment["model/name"].log(self.model.__class__.__name__)
 
         scheduler = OneCycleLR(
             optimizer,
