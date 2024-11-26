@@ -88,7 +88,10 @@ for ch, (mean, std) in enumerate(zip(channel_means, channel_stds)):
     print(f"Channel {ch} - Mean: {mean:.4f}, Std: {std:.4f}")
 
 channel_stats = {ch: {"mean": mean.item(), "std": std.item()} for ch, (mean, std) in enumerate(zip(channel_means, channel_stds))}
-output_file = "synapse_formation_channel_stats.json"
+output_dir = Path("./stats")
+output_file = output_dir / "synapse_formation_channel_stats.json"
+# Create the subdirectory if it doesn't exist
+output_dir.mkdir(parents=True, exist_ok=True)
 with open(output_file, "w") as f:
     json.dump(channel_stats, f, indent=4)
 
