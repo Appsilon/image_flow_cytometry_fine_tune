@@ -14,7 +14,7 @@ from lightning.pytorch.callbacks import LearningRateMonitor
 from fastai.vision.all import *
 import albumentations
 from albumentations.pytorch import ToTensorV2
-from experiment_specific_utils import data_module
+from experiment_specific_utils import data_module, transforms
 
 # %%
 
@@ -91,22 +91,8 @@ model_dir = "models"
 log_dir = "logs"
 scaling_factor = 4095.
 reshape_size = 256
-train_transform = albumentations.Compose([
-    # albumentations.SmallestMaxSize(max_size=reshape_size),
-    # albumentations.CenterCrop(height=reshape_size, width=reshape_size),
-    albumentations.VerticalFlip(p=0.5),         
-    albumentations.HorizontalFlip(p=0.5),
-    albumentations.Rotate(limit=90, p=0.5),
-    albumentations.RandomResizedCrop(height=reshape_size, width=reshape_size, scale=(0.8, 1), p=0.5),
-    # albumentations.GaussianNoise(var_limit=(10.0, 50.0), p=1.0), not noise for now
-    albumentations.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ToTensorV2()
-])
-
-test_val_transform = albumentations.Compose([
-    albumentations.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ToTensorV2()
-])
+train_transform = transforms.train_transform(reshape_size, include_normalization = True)
+test_val_transform = transforms.test_val_transform()
 
 # %%
 lr=0.0004
