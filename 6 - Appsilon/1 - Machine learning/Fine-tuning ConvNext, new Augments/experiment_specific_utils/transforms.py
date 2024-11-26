@@ -1,8 +1,22 @@
 import albumentations
 from albumentations.pytorch import ToTensorV2
+from pathlib import Path
+import json
 
 def get_normalization_stats():
-    pass
+    output_dir = Path("./stats")
+    output_file = output_dir / "synapse_formation_channel_stats.json"
+    if not output_file.exists():
+        raise FileNotFoundError(f"Normalization stats file not found at {output_file}")
+    
+    with open(output_file, "r") as f:
+        channel_stats = json.load(f)
+
+    means = [channel_stats[str(ch)]["mean"] for ch in range(len(channel_stats))]
+    stds = [channel_stats[str(ch)]["std"] for ch in range(len(channel_stats))]
+
+    return albumentations.Normalize(mean=means, std=stds)
+
 
 def train_transform(reshape_size, include_normalization=True):
     train_transforms = [
