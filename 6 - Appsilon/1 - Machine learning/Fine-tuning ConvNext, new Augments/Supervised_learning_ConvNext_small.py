@@ -121,6 +121,7 @@ run = neptune.init_run(
     api_token="eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiI3OTA1ZjQwZS03MDczLTRiMzgtYmRhOS1iYjM2Y2EyMjcwMDMifQ==",
 )
 
+run["sys/notes"] = "ConvNext small"
 # %%
 lr_monitor = LearningRateMonitor(logging_interval='step')
 
@@ -132,9 +133,9 @@ trainer = pl.Trainer(
 
 print("\nAvailable cuda memory before Neptune run: ", tools.print_cuda_memory())
 
-trainer.fit(model, datamodule=synapse_formation_module)
+# trainer.fit(model, datamodule=synapse_formation_module)
 
-# trainer.test(model, datamodule=module) need to implement, so commenting out for now
+trainer.test(model, datamodule=synapse_formation_module)
 
 run.stop()
 

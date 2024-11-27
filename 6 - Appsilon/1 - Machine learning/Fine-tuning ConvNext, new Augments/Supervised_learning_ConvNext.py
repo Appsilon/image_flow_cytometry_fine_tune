@@ -134,7 +134,7 @@ print("\nAvailable cuda memory before Neptune run: ", tools.print_cuda_memory())
 
 trainer.fit(model, datamodule=synapse_formation_module)
 
-# trainer.test(model, datamodule=module) need to implement, so commenting out for now
+trainer.test(model, datamodule=synapse_formation_module)
 
 run.stop()
 

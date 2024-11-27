@@ -11,19 +11,21 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 class ConvnextModel(LightningModule):
-    def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate, max_epochs):
+    def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate, max_epochs, weight_decay=0, dropout=0):
         super().__init__()
         self.save_hyperparameters()
         self.model = create_model(
             'convnext_base.fb_in22k_ft_in1k',
             pretrained=True,
             num_classes=num_classes,
-            in_chans=in_chans
+            in_chans=in_chans,
+            drop_rate = dropout
         )
 
         self.learning_rate = learning_rate
         self.max_epochs = max_epochs
         self.steps_per_epoch = steps_per_epoch
+        self.weight_decay = weight_decay
 
         self.train_acc = Accuracy(num_classes=num_classes, task="multiclass")
         self.val_acc = Accuracy(num_classes=num_classes, task="multiclass")
@@ -72,13 +74,13 @@ class ConvnextModel(LightningModule):
         self.test_labels = []
     
     def plot_confusion_matrix(self, cm, class_names):
-        plt.figure(figsize=(10, 7))
-        sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=class_names, yticklabels=class_names)
-        plt.ylabel("Actual")
-        plt.xlabel("Predicted")
-        plt.title("Confusion Matrix")
-        plt.close()
-        return plt
+        fig, ax = plt.subplots(figsize=(10, 7))
+        sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=class_names, yticklabels=class_names, ax=ax)
+        ax.set_xlabel("Predicted Labels")
+        ax.set_ylabel("True Labels")
+        ax.set_title("Confusion Matrix")
+        plt.tight_layout()
+        return fig
 
     def on_test_epoch_end(self):
         preds = np.array(self.test_preds)
@@ -100,8 +102,9 @@ class ConvnextModel(LightningModule):
         print("Confusion Matrix:\n", conf_matrix)
 
     def configure_optimizers(self):
-        optimizer = optim.Adam(self.parameters(), lr=self.learning_rate)
+        optimizer = optim.Adam(self.parameters(), lr=self.learning_rate, weight_decay=self.weight_decay)
         self.logger.experiment["optimizer/lr"].log(self.learning_rate)
+        self.logger.experiment["optimizer/weight_decay"].log(self.weight_decay)
         optimizer_name = optimizer.__class__.__name__
         self.logger.experiment["optimizer/name"].log(optimizer_name)
         self.logger.experiment["model/name"].log(self.model.__class__.__name__)

@@ -91,7 +91,7 @@ model_dir = "models"
 log_dir = "logs"
 scaling_factor = 4095.
 reshape_size = 256
-train_transform = transforms.train_transform_gauss(reshape_size, include_normalization = True)
+train_transform = transforms.train_transform(reshape_size, include_normalization = True)
 test_val_transform = transforms.test_val_transform()
 
 # %%
@@ -109,10 +109,11 @@ synapse_formation_module = data_module.SynapseFormationDataModule(metadata, trai
 synapse_formation_module.setup(stage='fit')
 train_loader = synapse_formation_module.train_dataloader()
 val_loader = synapse_formation_module.val_dataloader()
-model = convnext.ConvnextModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_loader), learning_rate=lr, max_epochs=max_epochs)
+model = convnext.ConvnextModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_loader), learning_rate=lr, 
+                               max_epochs=max_epochs, weight_decay=0.05, dropout=0.1)
 
-tools.save_multichannel_preview(train_loader, n_samples=10, save_path="train_multichannel_convnext_gauss_preview.png")
-tools.save_multichannel_preview(val_loader, n_samples=10, save_path="valid_multichannel_convnext_gauss_preview.png")
+tools.save_multichannel_preview(train_loader, n_samples=10, save_path="train_multichannel_convnext_regularization_preview.png")
+tools.save_multichannel_preview(val_loader, n_samples=10, save_path="valid_multichannel_convnext_regularization_preview.png")
 print("Preview saved!\n\n")
 
 # %%
@@ -120,8 +121,7 @@ run = neptune.init_run(
     project="appsilon/image-flow-cytometry-finetune",
     api_token="eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiI3OTA1ZjQwZS03MDczLTRiMzgtYmRhOS1iYjM2Y2EyMjcwMDMifQ==",
 )
-run["sys/notes"] = "ConvNext with Gauss"
-
+run["sys/notes"] = "ConvNext with regularization"
 # %%
 lr_monitor = LearningRateMonitor(logging_interval='step')
 
@@ -133,7 +133,7 @@ trainer = pl.Trainer(
 
 print("\nAvailable cuda memory before Neptune run: ", tools.print_cuda_memory())
 
-trainer.fit(model, datamodule=synapse_formation_module)
+# trainer.fit(model, datamodule=synapse_formation_module)
 
 trainer.test(model, datamodule=synapse_formation_module)
 
