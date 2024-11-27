@@ -91,8 +91,8 @@ model_dir = "models"
 log_dir = "logs"
 scaling_factor = 4095.
 reshape_size = 256
-train_transform = transforms.train_transform(reshape_size, include_normalization = True)
-test_val_transform = transforms.test_val_transform()
+train_transform = transforms.train_transform_fit_image(reshape_size, include_normalization = True)
+test_val_transform = transforms.test_val_transform_fit_image(reshape_size)
 
 # %%
 lr=0.0004

@@ -91,7 +91,7 @@ model_dir = "models"
 log_dir = "logs"
 scaling_factor = 4095.
 reshape_size = 256
-train_transform = transforms.train_transform(reshape_size, include_normalization = True)
+train_transform = transforms.train_transform_gauss(reshape_size, include_normalization = True)
 test_val_transform = transforms.test_val_transform()
 
 # %%

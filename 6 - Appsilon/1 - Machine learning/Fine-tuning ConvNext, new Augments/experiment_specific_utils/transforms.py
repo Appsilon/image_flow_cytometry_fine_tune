@@ -20,13 +20,10 @@ def get_normalization_stats():
 
 def train_transform(reshape_size, include_normalization=True):
     train_transforms = [
-    # albumentations.SmallestMaxSize(max_size=reshape_size),
-    # albumentations.CenterCrop(height=reshape_size, width=reshape_size),
     albumentations.VerticalFlip(p=0.5),         
     albumentations.HorizontalFlip(p=0.5),
     albumentations.Rotate(limit=90, p=0.5),
     albumentations.RandomResizedCrop(height=reshape_size, width=reshape_size, scale=(0.8, 1), p=0.5),
-    # albumentations.GaussianNoise(var_limit=(10.0, 50.0), p=1.0), not noise for now
     ]
     if include_normalization:
         norm_stats = get_normalization_stats()
@@ -37,3 +34,44 @@ def train_transform(reshape_size, include_normalization=True):
 def test_val_transform():
     norm_stats = get_normalization_stats()
     return albumentations.Compose([norm_stats, ToTensorV2()])
+
+
+def train_transform_gauss(reshape_size, include_normalization=True):
+    train_transforms = [
+    albumentations.VerticalFlip(p=0.5),         
+    albumentations.HorizontalFlip(p=0.5),
+    albumentations.Rotate(limit=90, p=0.5),
+    albumentations.RandomResizedCrop(height=reshape_size, width=reshape_size, scale=(0.8, 1), p=0.5),
+    albumentations.GaussianBlur(blur_limit=(3, 3), sigma_limit=(0.15, 0.25), p=0.4)
+    ]
+    if include_normalization:
+        norm_stats = get_normalization_stats()
+        train_transforms.append(norm_stats)
+    train_transforms.append(ToTensorV2())
+    return albumentations.Compose(train_transforms)
+
+def train_transform_fit_image(reshape_size, include_normalization=True):
+
+    train_transforms = [
+    albumentations.SmallestMaxSize(max_size=reshape_size),
+    albumentations.CenterCrop(height=reshape_size, width=reshape_size),
+    albumentations.VerticalFlip(p=0.5),         
+    albumentations.HorizontalFlip(p=0.5),
+    albumentations.Rotate(limit=90, p=0.5),
+    albumentations.RandomResizedCrop(height=reshape_size, width=reshape_size, scale=(0.8, 1), p=0.5),
+    ]
+    if include_normalization:
+        norm_stats = get_normalization_stats()
+        train_transforms.append(norm_stats)
+    train_transforms.append(ToTensorV2())
+    return albumentations.Compose(train_transforms)
+
+
+def test_val_transform_fit_image(reshape_size):
+
+    val_test_transforms = [
+    albumentations.SmallestMaxSize(max_size=reshape_size),
+    albumentations.CenterCrop(height=reshape_size, width=reshape_size)
+    ]
+    norm_stats = get_normalization_stats()
+    return albumentations.Compose(val_test_transforms + [norm_stats, ToTensorV2()])

@@ -9,7 +9,7 @@ import lightning.pytorch as pl
 import sys
 from pathlib import Path
 sys.path.append(str(Path('../../').resolve()))
-from utils import convnext, tools
+from utils import convnext_small, tools
 from lightning.pytorch.callbacks import LearningRateMonitor
 from fastai.vision.all import *
 import albumentations
@@ -109,7 +109,7 @@ synapse_formation_module = data_module.SynapseFormationDataModule(metadata, trai
 synapse_formation_module.setup(stage='fit')
 train_loader = synapse_formation_module.train_dataloader()
 val_loader = synapse_formation_module.val_dataloader()
-model = convnext.ConvnextModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_loader), learning_rate=lr, max_epochs=max_epochs)
+model = convnext_small.ConvnextSmallModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_loader), learning_rate=lr, max_epochs=max_epochs)
 
 tools.save_multichannel_preview(train_loader, n_samples=10, save_path="train_multichannel_preview.png")
 tools.save_multichannel_preview(val_loader, n_samples=10, save_path="valid_multichannel_preview.png")

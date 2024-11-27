@@ -10,12 +10,12 @@ from sklearn.metrics import confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-class ConvnextModel(LightningModule):
+class ConvnextSmallModel(LightningModule):
     def __init__(self, num_classes, in_chans, steps_per_epoch, learning_rate, max_epochs):
         super().__init__()
         self.save_hyperparameters()
         self.model = create_model(
-            'convnext_base.fb_in22k_ft_in1k',
+            'convnext_small.fb_in22k_ft_in1k',
             pretrained=True,
             num_classes=num_classes,
             in_chans=in_chans
