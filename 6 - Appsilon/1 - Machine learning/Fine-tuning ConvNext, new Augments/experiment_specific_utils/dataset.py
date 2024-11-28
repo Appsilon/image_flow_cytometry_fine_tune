@@ -64,7 +64,8 @@ class DatasetGenerator(Dataset):
                 reshape_size=64,
                 scaling_factor = 4095.,
                 task="classification",
-                transform=None):
+                transform=None,
+                skip_crop_pad=False):
 
         self.metadata = metadata.copy().reset_index(drop = True)
         self.selected_channels = selected_channels
@@ -74,6 +75,7 @@ class DatasetGenerator(Dataset):
         self.label_map = label_map
         self.transform = transform
         self.scaling_factor = scaling_factor
+        self.skip_crop_pad = skip_crop_pad
 
     def __len__(self):
         return len(self.metadata)
@@ -88,26 +90,27 @@ class DatasetGenerator(Dataset):
         image_original= get_image(h5_file_path, self.scaling_factor)
         label = self.metadata.loc[idx,"label"]
 
-        ## creating the image
-        h, w = crop_pad_h_w(image_original, self.reshape_size)
-        h1_crop, h2_crop, h1_pad, h2_pad = h
-        w1_crop, w2_crop, w1_pad, w2_pad = w
-        image = np.zeros((  self.num_channels,
-                            self.reshape_size,
-                            self.reshape_size),
-                            dtype=np.float64)
+        # Initialize the image array
+        if not self.skip_crop_pad:
+            h, w = crop_pad_h_w(image_original, self.reshape_size)
+            h1_crop, h2_crop, h1_pad, h2_pad = h
+            w1_crop, w2_crop, w1_pad, w2_pad = w
+            image = np.zeros((self.num_channels, self.reshape_size, self.reshape_size),
+                             dtype=np.float64)
 
-        # filling the image with selected channels
-        for i, ch in enumerate(self.selected_channels):
-            image_dummy = crop( image_original[:, :, ch],
-                                ((h1_crop, h2_crop),
-                                (w1_crop, w2_crop)))
-            image_dummy = np.pad(image_dummy,
-                                ((h1_pad, h2_pad),(w1_pad, w2_pad)),
-                                "constant",
-                                constant_values = 0)
-            image[i, :, :] = image_dummy
-            image_dummy = None
+            # Fill the image with selected channels
+            for i, ch in enumerate(self.selected_channels):
+                image_dummy = crop(image_original[:, :, ch],
+                                   ((h1_crop, h2_crop), (w1_crop, w2_crop)))
+                image_dummy = np.pad(image_dummy,
+                                     ((h1_pad, h2_pad), (w1_pad, w2_pad)),
+                                     "constant",
+                                     constant_values=0)
+                image[i, :, :] = image_dummy
+                image_dummy = None
+        else:
+            image = np.stack([image_original[:, :, ch] for ch in self.selected_channels], axis=0)
+
 
         image_original = None
 
