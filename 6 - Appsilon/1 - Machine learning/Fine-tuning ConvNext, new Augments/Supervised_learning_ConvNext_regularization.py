@@ -110,7 +110,7 @@ synapse_formation_module.setup(stage='fit')
 train_loader = synapse_formation_module.train_dataloader()
 val_loader = synapse_formation_module.val_dataloader()
 model = convnext.ConvnextModel(num_classes=len(set_of_interesting_classes), in_chans=len(selected_channels), steps_per_epoch=len(train_loader), learning_rate=lr, 
-                               max_epochs=max_epochs, weight_decay=0.05, dropout=0.1)
+                               max_epochs=max_epochs, weight_decay=0.05)
 
 tools.save_multichannel_preview(train_loader, n_samples=10, save_path="train_multichannel_convnext_regularization_preview.png")
 tools.save_multichannel_preview(val_loader, n_samples=10, save_path="valid_multichannel_convnext_regularization_preview.png")
