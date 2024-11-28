@@ -25,6 +25,7 @@ random.seed(seed_value)
 
 np.random.seed(seed_value)
 torch.manual_seed(seed_value)
+torch.cuda.manual_seed(seed_value)
 
 # %%
 metadata = pd.read_csv("/home/jedrzej/projects/image_flow_cytometry_fine_tune/data/jedrzej/metadata_subset.csv.gz")
