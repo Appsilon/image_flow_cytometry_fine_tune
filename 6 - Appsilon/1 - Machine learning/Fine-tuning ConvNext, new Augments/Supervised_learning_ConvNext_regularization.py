@@ -133,7 +133,7 @@ trainer = pl.Trainer(
 
 print("\nAvailable cuda memory before Neptune run: ", tools.print_cuda_memory())
 
-# trainer.fit(model, datamodule=synapse_formation_module)
+trainer.fit(model, datamodule=synapse_formation_module)
 
 trainer.test(model, datamodule=synapse_formation_module)
 
