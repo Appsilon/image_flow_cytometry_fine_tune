@@ -1,17 +1,26 @@
-# scifAI-notebooks
+# Install
 
-Here, we present scifAI-notebooks which are used to analyze the synapse formation data including feature extraction, statistical analysis and machine learning methods. Each folder includes a jupyter notebook that is used for creation of the figures for the manuscript.
+The project relies on `uv` to manage its dependencies.
 
-Note: this repository only includes the jupyter notebooks on the synapse formation data (to be published). For following on how this scifAI package is works, please refer to https://github.com/marrlab/scifAI
+To create virtual env an activate it:
+1) `uv sync`
+2) `source .venv/bin/activate`
 
-# How to cite this work
+# Project structure
 
-To cite this work, you would need to cite the preprint and the dataset:
+Directories 1-5 contain the scripts by the IFC paper's authors. Our (Appsilon's) work is entirely restricted to directory `6 - Appsilon`. The directory structure inside mimics the original 1-5 directories, since we are basing our approach on what the authors' did, at least to a large degree.
 
-preprint:
-scifAI: Explainable machine learning for profiling the immunological synapse and functional characterization of therapeutic antibodies
-Sayedali Shetab Boushehri, Katharina Essig, Nikolaos-Kosmas Chlis, Sylvia Herter, Marina Bacac, Fabian J Theis, Elke Glasmacher, Carsten Marr, Fabian Schmich
-bioRxiv 2022.10.24.513494; doi: https://doi.org/10.1101/2022.10.24.513494
+When performing experiments it is recommended to create logical subfolders that mark the different chapters in our work. For instance:
 
-dataset:
-Essig, Katharina et al. (2022), An imaging flow cytometry dataset for profiling the immunological synapse of therapeutic antibodies, Dryad, Dataset, https://doi.org/10.5061/dryad.ht76hdrk7
+.
+├── Fine-tuning ConvNext
+├── Fine-tuning ConvNext, new Augments
+├── Fine-tuning ViT LoRA
+└── Reproducing ResNet18 results
+
+
+The following hierarchy represents:
+1) Trying to reproduce authors' original ResNet results
+2) Switching to ConvNext to try and improve them
+3) Another switch to ViT with LoRA applied
+4) Change of direction - trying augments of our own design, once again with ConvNext
